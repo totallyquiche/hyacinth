@@ -56,9 +56,9 @@ abstract class DomElement
      * 
      * @param array
      * 
-     * @return Input
+     * @return DomElement
      */
-    public function setAttributes(array $attributes) : Input
+    public function setAttributes(array $attributes) : DomElement
     {
         $this->attributes = $attributes;
 
@@ -80,9 +80,9 @@ abstract class DomElement
      * 
      * @param array $attributes
      * 
-     * @return Input
+     * @return DomElement
      */
-    public function addAttributes(array $attributes) : Input
+    public function addAttributes(array $attributes) : DomElement
     {
         foreach ($attributes as $attribute_name => $attribute_value) {
             $this->setAttribute($attribute_name, $attribute_value);
@@ -96,9 +96,9 @@ abstract class DomElement
      * 
      * @param array|null $attributes
      * 
-     * @return Input
+     * @return DomElement
      */
-    public function removeAttributes(array $attributes = null) : Input
+    public function removeAttributes(array $attributes = null) : DomElement
     {
         $attributes_to_remove = $attributes ?: $this->getAttributes();
         
@@ -115,9 +115,9 @@ abstract class DomElement
      * @param string      $attribute_name
      * @param string|null $attribute_value
      * 
-     * @return Input
+     * @return DomElement
      */
-    public function setAttribute(string $attribute_name, string $attribute_value = null) : Input
+    public function setAttribute(string $attribute_name, string $attribute_value = null) : DomElement
     {
         $this->attributes[$attribute_name] = $attribute_value;
 
@@ -141,9 +141,9 @@ abstract class DomElement
      * 
      * @param string $attribute_name
      * 
-     * @return Input
+     * @return DomElement
      */
-    public function removeAttribute(string $attribute_name) : Input
+    public function removeAttribute(string $attribute_name) : DomElement
     {
         unset($this->attributes[$attribute_name]);
 
