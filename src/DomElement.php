@@ -11,14 +11,14 @@ abstract class DomElement
      * 
      * @var array
      */
-    protected $attributes = [];
+    protected array $attributes = [];
 
     /**
      * The name of the tag.
      * 
      * @var string
      */
-    protected $tag_name;
+    protected string $tag_name;
 
     /**
      * Instantiate the object. Set the type.

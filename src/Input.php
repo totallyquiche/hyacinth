@@ -13,7 +13,7 @@ class Input extends DomElement
      * 
      * @var string
      */
-    protected $tag_name = 'input';
+    protected string $tag_name = 'input';
 
     /**
      * Sets the initial attributes. Sets the type to "text" if one was not specified.
