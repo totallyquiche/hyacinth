@@ -435,4 +435,17 @@ class InputTest extends TestCase
                 ->getAttributes()
         );
     }
+
+    /**
+     * Test getTagName() returns "input".
+     * 
+     * @return void
+     */
+    public function testGetTagName() : void
+    {
+        $this->assertEquals(
+            'input',
+            (new Input)->getTagName()
+        );
+    }
 }
