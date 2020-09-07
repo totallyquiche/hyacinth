@@ -9,9 +9,12 @@ use Hyacinth\DomElement;
 class Textarea extends DomElement
 {
     /**
-     * The name of the element.
+     * Return the name of the element.
      * 
      * @var string
      */
-    protected string $tag_name = 'textarea';
+    public function getTagName() : string
+    {
+        return 'textarea';
+    }
 }

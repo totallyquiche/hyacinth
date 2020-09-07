@@ -20,6 +20,17 @@ class InputTest extends TestCase
     }
 
     /**
+     * Test that getTagName() returns expected value.
+     */
+    public function testGetTagName() : void
+    {
+        $this->assertEquals(
+            'input',
+            (new Input)->getTagName()
+        );
+    }
+
+    /**
      * Test that a new Input has a type of "text" by default.
      * 
      * @return void

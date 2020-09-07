@@ -18,4 +18,15 @@ class TextareaTest extends TestCase
     {
         $this->assertInstanceOf(Textarea::class, new Textarea);
     }
+
+    /**
+     * Test that getTagName() returns expected value.
+     */
+    public function testGetTagName() : void
+    {
+        $this->assertEquals(
+            'textarea',
+            (new Textarea)->getTagName()
+        );
+    }
 }
