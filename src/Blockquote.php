@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Blockquote extends StandardElement
+class Blockquote extends NonVoidElement
 {
     /**
      * Return the name of the element.

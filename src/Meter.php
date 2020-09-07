@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Meter extends StandardElement
+class Meter extends NonVoidElement
 {
     /**
      * Return the name of the element.

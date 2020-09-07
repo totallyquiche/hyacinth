@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Bdo extends StandardElement
+class Bdo extends NonVoidElement
 {
     /**
      * Return the name of the element.

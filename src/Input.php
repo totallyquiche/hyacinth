@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Exception;
 
-class Input extends SelfClosingElement
+class Input extends VoidElement
 {
     /**
      * Sets the initial attributes. Sets the type to "text" if one was not specified.

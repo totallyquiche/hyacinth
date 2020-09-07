@@ -5,19 +5,19 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
-use Hyacinth\StandardElement;
+use Hyacinth\NonVoidElement;
 use StdClass;
 
-class StandardElementTest extends TestCase
+class NonVoidElementTest extends TestCase
 {
     /**
-     * Create a fake of the StandardElement abstract class.
+     * Create a fake of the NonVoidElement abstract class.
      * 
-     * @return StandardElement
+     * @return NonVoidElement
      */
-    private function getFake(array $attributes = []) : StandardElement
+    private function getFake(array $attributes = []) : NonVoidElement
     {
-        return (new class($attributes) extends StandardElement {
+        return (new class($attributes) extends NonVoidElement {
             /**
              * The name of the element's tag.
              * 

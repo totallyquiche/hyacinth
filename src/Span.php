@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Span extends StandardElement
+class Span extends NonVoidElement
 {
     /**
      * Return the name of the element.

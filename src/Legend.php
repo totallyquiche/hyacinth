@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Legend extends StandardElement
+class Legend extends NonVoidElement
 {
     /**
      * Return the name of the element.

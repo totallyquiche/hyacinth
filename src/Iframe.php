@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Iframe extends StandardElement
+class Iframe extends NonVoidElement
 {
     /**
      * Return the name of the element.

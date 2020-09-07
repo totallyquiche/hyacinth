@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Datalist extends StandardElement
+class Datalist extends NonVoidElement
 {
     /**
      * Return the name of the element.

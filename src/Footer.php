@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Footer extends StandardElement
+class Footer extends NonVoidElement
 {
     /**
      * Return the name of the element.

@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Thead extends StandardElement
+class Thead extends NonVoidElement
 {
     /**
      * Return the name of the element.

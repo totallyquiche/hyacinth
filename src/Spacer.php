@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Spacer extends StandardElement
+class Spacer extends NonVoidElement
 {
     /**
      * Return the name of the element.

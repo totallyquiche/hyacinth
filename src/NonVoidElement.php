@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Hyacinth;
 
-abstract class StandardElement extends DomElement
+abstract class NonVoidElement extends DomElement
 {
     /**
      * The element's content.
@@ -49,9 +49,9 @@ abstract class StandardElement extends DomElement
      * 
      * @param array $content
      * 
-     * @return StandardElement
+     * @return NonVoidElement
      */
-    public function setContent(array $content) : StandardElement
+    public function setContent(array $content) : NonVoidElement
     {
         $this->content = $content;
 
@@ -63,9 +63,9 @@ abstract class StandardElement extends DomElement
      * 
      * @param array $content
      * 
-     * @return StandardElement
+     * @return NonVoidElement
      */
-    public function addContent(array $content) : StandardElement
+    public function addContent(array $content) : NonVoidElement
     {
         $this->content = array_merge($this->content, $content);
 

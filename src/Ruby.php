@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Ruby extends StandardElement
+class Ruby extends NonVoidElement
 {
     /**
      * Return the name of the element.

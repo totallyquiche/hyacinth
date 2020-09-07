@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Video extends StandardElement
+class Video extends NonVoidElement
 {
     /**
      * Return the name of the element.

@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Audio extends StandardElement
+class Audio extends NonVoidElement
 {
     /**
      * Return the name of the element.

@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Colgroup extends StandardElement
+class Colgroup extends NonVoidElement
 {
     /**
      * Return the name of the element.

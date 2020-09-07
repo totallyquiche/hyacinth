@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Frameset extends StandardElement
+class Frameset extends NonVoidElement
 {
     /**
      * Return the name of the element.

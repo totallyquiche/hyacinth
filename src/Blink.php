@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Blink extends StandardElement
+class Blink extends NonVoidElement
 {
     /**
      * Return the name of the element.

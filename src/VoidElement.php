@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Hyacinth;
 
-abstract class SelfClosingElement extends DomElement
+abstract class VoidElement extends DomElement
 {
     /**
      * Returns the string representation of the element.

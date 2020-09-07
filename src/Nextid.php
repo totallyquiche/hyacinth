@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Nextid extends StandardElement
+class Nextid extends NonVoidElement
 {
     /**
      * Return the name of the element.

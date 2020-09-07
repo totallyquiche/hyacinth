@@ -5,18 +5,18 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
-use Hyacinth\SelfClosingElement;
+use Hyacinth\VoidElement;
 
-class SelfClosingElementTest extends TestCase
+class VoidElementTest extends TestCase
 {
     /**
-     * Create a fake of the SelfClosingElement abstract class.
+     * Create a fake of the VoidElement abstract class.
      * 
-     * @return SelfClosingElement
+     * @return VoidElement
      */
-    private function getFake(array $attributes = []) : SelfClosingElement
+    private function getFake(array $attributes = []) : VoidElement
     {
-        return (new class($attributes) extends SelfClosingElement {
+        return (new class($attributes) extends VoidElement {
             /**
              * The name of the element's tag.
              * 

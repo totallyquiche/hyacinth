@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Multicol extends StandardElement
+class Multicol extends NonVoidElement
 {
     /**
      * Return the name of the element.

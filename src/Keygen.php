@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Keygen extends SelfClosingElement
+class Keygen extends VoidElement
 {
     /**
      * Return the name of the element.

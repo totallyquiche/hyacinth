@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Figcaption extends StandardElement
+class Figcaption extends NonVoidElement
 {
     /**
      * Return the name of the element.

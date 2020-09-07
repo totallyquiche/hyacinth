@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Marquee extends StandardElement
+class Marquee extends NonVoidElement
 {
     /**
      * Return the name of the element.

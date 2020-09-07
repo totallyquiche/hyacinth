@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Hyacinth;
 
-class Textarea extends StandardElement
+class Textarea extends NonVoidElement
 {
     /**
      * Return the name of the element.

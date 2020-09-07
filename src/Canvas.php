@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Canvas extends StandardElement
+class Canvas extends NonVoidElement
 {
     /**
      * Return the name of the element.

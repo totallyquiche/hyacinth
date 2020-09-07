@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Applet extends StandardElement
+class Applet extends NonVoidElement
 {
     /**
      * Return the name of the element.

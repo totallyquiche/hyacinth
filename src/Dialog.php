@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Dialog extends StandardElement
+class Dialog extends NonVoidElement
 {
     /**
      * Return the name of the element.

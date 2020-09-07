@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Sub extends StandardElement
+class Sub extends NonVoidElement
 {
     /**
      * Return the name of the element.
