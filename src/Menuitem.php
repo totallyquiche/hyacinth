@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Menuitem extends StandardElement
+class Menuitem extends SelfClosingElement
 {
     /**
      * Return the name of the element.

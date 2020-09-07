@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Embed extends StandardElement
+class Embed extends SelfClosingElement
 {
     /**
      * Return the name of the element.

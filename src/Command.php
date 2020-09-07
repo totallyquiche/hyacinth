@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Command extends StandardElement
+class Command extends SelfClosingElement
 {
     /**
      * Return the name of the element.
