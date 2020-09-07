@@ -26,16 +26,6 @@ class SelfClosingElementTest extends TestCase
             {
                 return 'fake';
             }
-
-             /**
-              * Return a string representation of the object.
-              *
-              * @return string
-              */
-              public function __toString() : string
-              {
-                  return '';
-              }
         });
     }
 
@@ -51,6 +41,21 @@ class SelfClosingElementTest extends TestCase
         $this->assertEquals(
             '',
             $fake->getCloseTag()
+        );
+    }
+
+    /**
+     * Test __toString().
+     * 
+     * @return void
+     */
+    public function testToString() : void
+    {
+        $fake = $this->getFake();
+
+        $this->assertEquals(
+            $fake->getOpenTag(),
+            (string) $fake
         );
     }
 }

@@ -50,18 +50,6 @@ class DomElementTest extends TestCase
     }
 
     /**
-     * Test element can be cast to a string.
-     * 
-     * @return void
-     */
-    public function testCanCastToString() : void
-    {
-        $this->assertIsString(
-            (string) $this->getFake()
-        );
-    }
-
-    /**
      * Test getOpenTag() returns expected value when the element has no attributes.
      * 
      * @return void
@@ -582,7 +570,6 @@ class DomElementTest extends TestCase
                 ->getAttributes()
         );
     }
-
 
     /**
      * Test removeAttributes() removes all attributes when none are specified.
