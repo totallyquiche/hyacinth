@@ -27,15 +27,25 @@ class DomElementTest extends TestCase
                 return 'fake';
             }
 
-             /**
-              * Return a string representation of the object.
-              *
-              * @return string
-              */
-              public function __toString() : string
-              {
-                  return '';
-              }
+            /**
+             * Return a string representation of the object.
+             *
+             * @return string
+             */
+            public function __toString() : string
+            {
+                return '';
+            }
+
+            /**
+             * Return the close tag.
+             * 
+             * @return string
+             */
+            public function getCloseTag() : string
+            {
+                return '';
+            }
         });
     }
 
@@ -585,21 +595,6 @@ class DomElementTest extends TestCase
             $this->getFake()
                 ->removeAttributes()
                 ->getAttributes()
-        );
-    }
-
-    /**
-     * Test that the closing tag is in the format </tag_name>.
-     * 
-     * @return void
-     */
-    public function testCloseTagFormat() : void
-    {
-        $fake = $this->getFake();
-
-        $this->assertEquals(
-            '</' . $fake->getTagName() . '>',
-            $fake->getCloseTag()
         );
     }
 }

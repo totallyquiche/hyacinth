@@ -194,8 +194,5 @@ abstract class DomElement
      * 
      * @return string
      */
-    public function getCloseTag() : string
-    {
-        return '</' . $this->getTagName() . '>';
-    }
+    abstract public function getCloseTag() : string;
 }

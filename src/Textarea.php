@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Textarea extends DomElement
+class Textarea extends StandardElement
 {
     /**
      * Return the name of the element.
