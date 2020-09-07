@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Rtc;
 
 class RtcTest extends TestCase
@@ -16,7 +17,7 @@ class RtcTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Rtc::class, new Rtc);
+        $this->assertInstanceOf(NonVoidElement::class, new Rtc);
     }
 
     /**

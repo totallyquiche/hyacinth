@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Nav;
 
 class NavTest extends TestCase
@@ -16,7 +17,7 @@ class NavTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Nav::class, new Nav);
+        $this->assertInstanceOf(NonVoidElement::class, new Nav);
     }
 
     /**

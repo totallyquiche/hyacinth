@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\VoidElement;
 use Hyacinth\Area;
 
 class AreaTest extends TestCase
@@ -16,7 +17,7 @@ class AreaTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Area::class, new Area);
+        $this->assertInstanceOf(VoidElement::class, new Area);
     }
 
     /**

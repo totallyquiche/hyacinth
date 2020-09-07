@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Samp;
 
 class SampTest extends TestCase
@@ -16,7 +17,7 @@ class SampTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Samp::class, new Samp);
+        $this->assertInstanceOf(NonVoidElement::class, new Samp);
     }
 
     /**

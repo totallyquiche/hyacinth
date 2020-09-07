@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Slot;
 
 class SlotTest extends TestCase
@@ -16,7 +17,7 @@ class SlotTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Slot::class, new Slot);
+        $this->assertInstanceOf(NonVoidElement::class, new Slot);
     }
 
     /**

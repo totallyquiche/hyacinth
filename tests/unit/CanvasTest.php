@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Canvas;
 
 class CanvasTest extends TestCase
@@ -16,7 +17,7 @@ class CanvasTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Canvas::class, new Canvas);
+        $this->assertInstanceOf(NonVoidElement::class, new Canvas);
     }
 
     /**

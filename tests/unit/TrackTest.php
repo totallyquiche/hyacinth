@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\VoidElement;
 use Hyacinth\Track;
 
 class TrackTest extends TestCase
@@ -16,7 +17,7 @@ class TrackTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Track::class, new Track);
+        $this->assertInstanceOf(VoidElement::class, new Track);
     }
 
     /**

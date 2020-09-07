@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\VoidElement;
 use Hyacinth\Col;
 
 class ColTest extends TestCase
@@ -16,7 +17,7 @@ class ColTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Col::class, new Col);
+        $this->assertInstanceOf(VoidElement::class, new Col);
     }
 
     /**

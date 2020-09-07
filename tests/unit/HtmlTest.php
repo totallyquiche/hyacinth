@@ -5,18 +5,19 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Html;
 
 class HtmlTest extends TestCase
 {
     /**
-     * Test that the element can be instantiated.
+     * Test that the element is an instance of NonVoidElement.
      * 
      * @return void
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Html::class, new Html);
+        $this->assertInstanceOf(NonVoidElement::class, new Html);
     }
 
     /**

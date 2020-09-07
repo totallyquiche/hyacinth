@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Tr;
 
 class TrTest extends TestCase
@@ -16,7 +17,7 @@ class TrTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Tr::class, new Tr);
+        $this->assertInstanceOf(NonVoidElement::class, new Tr);
     }
 
     /**

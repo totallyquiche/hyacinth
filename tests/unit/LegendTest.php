@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Legend;
 
 class LegendTest extends TestCase
@@ -16,7 +17,7 @@ class LegendTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Legend::class, new Legend);
+        $this->assertInstanceOf(NonVoidElement::class, new Legend);
     }
 
     /**

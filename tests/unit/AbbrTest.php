@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Abbr;
 
 class AbbrTest extends TestCase
@@ -16,7 +17,7 @@ class AbbrTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Abbr::class, new Abbr);
+        $this->assertInstanceOf(NonVoidElement::class, new Abbr);
     }
 
     /**

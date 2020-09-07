@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Label;
 
 class LabelTest extends TestCase
@@ -16,7 +17,7 @@ class LabelTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Label::class, new Label);
+        $this->assertInstanceOf(NonVoidElement::class, new Label);
     }
 
     /**

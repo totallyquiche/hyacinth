@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Span;
 
 class SpanTest extends TestCase
@@ -16,7 +17,7 @@ class SpanTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Span::class, new Span);
+        $this->assertInstanceOf(NonVoidElement::class, new Span);
     }
 
     /**

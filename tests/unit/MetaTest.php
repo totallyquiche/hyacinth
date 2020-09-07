@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\VoidElement;
 use Hyacinth\Meta;
 
 class MetaTest extends TestCase
@@ -16,7 +17,7 @@ class MetaTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Meta::class, new Meta);
+        $this->assertInstanceOf(VoidElement::class, new Meta);
     }
 
     /**

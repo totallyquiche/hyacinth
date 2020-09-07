@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\VoidElement;
 use Hyacinth\Menuitem;
 
 class MenuitemTest extends TestCase
@@ -16,7 +17,7 @@ class MenuitemTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Menuitem::class, new Menuitem);
+        $this->assertInstanceOf(VoidElement::class, new Menuitem);
     }
 
     /**

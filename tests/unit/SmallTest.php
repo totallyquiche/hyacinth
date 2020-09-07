@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Small;
 
 class SmallTest extends TestCase
@@ -16,7 +17,7 @@ class SmallTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Small::class, new Small);
+        $this->assertInstanceOf(NonVoidElement::class, new Small);
     }
 
     /**

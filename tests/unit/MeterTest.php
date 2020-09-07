@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Meter;
 
 class MeterTest extends TestCase
@@ -16,7 +17,7 @@ class MeterTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Meter::class, new Meter);
+        $this->assertInstanceOf(NonVoidElement::class, new Meter);
     }
 
     /**

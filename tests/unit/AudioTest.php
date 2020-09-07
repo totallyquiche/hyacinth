@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Audio;
 
 class AudioTest extends TestCase
@@ -16,7 +17,7 @@ class AudioTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Audio::class, new Audio);
+        $this->assertInstanceOf(NonVoidElement::class, new Audio);
     }
 
     /**

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Frame;
 
 class FrameTest extends TestCase
@@ -16,7 +17,7 @@ class FrameTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Frame::class, new Frame);
+        $this->assertInstanceOf(NonVoidElement::class, new Frame);
     }
 
     /**

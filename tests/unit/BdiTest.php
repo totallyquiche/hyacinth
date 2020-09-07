@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Bdi;
 
 class BdiTest extends TestCase
@@ -16,7 +17,7 @@ class BdiTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Bdi::class, new Bdi);
+        $this->assertInstanceOf(NonVoidElement::class, new Bdi);
     }
 
     /**

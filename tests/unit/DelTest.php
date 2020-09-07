@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Del;
 
 class DelTest extends TestCase
@@ -16,7 +17,7 @@ class DelTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Del::class, new Del);
+        $this->assertInstanceOf(NonVoidElement::class, new Del);
     }
 
     /**

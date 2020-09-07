@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Xmp;
 
 class XmpTest extends TestCase
@@ -16,7 +17,7 @@ class XmpTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Xmp::class, new Xmp);
+        $this->assertInstanceOf(NonVoidElement::class, new Xmp);
     }
 
     /**

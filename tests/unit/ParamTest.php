@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\VoidElement;
 use Hyacinth\Param;
 
 class ParamTest extends TestCase
@@ -16,7 +17,7 @@ class ParamTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Param::class, new Param);
+        $this->assertInstanceOf(VoidElement::class, new Param);
     }
 
     /**

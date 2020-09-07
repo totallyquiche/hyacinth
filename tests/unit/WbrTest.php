@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\VoidElement;
 use Hyacinth\Wbr;
 
 class WbrTest extends TestCase
@@ -16,7 +17,7 @@ class WbrTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Wbr::class, new Wbr);
+        $this->assertInstanceOf(VoidElement::class, new Wbr);
     }
 
     /**

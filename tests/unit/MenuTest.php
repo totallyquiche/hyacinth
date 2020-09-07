@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Menu;
 
 class MenuTest extends TestCase
@@ -16,7 +17,7 @@ class MenuTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Menu::class, new Menu);
+        $this->assertInstanceOf(NonVoidElement::class, new Menu);
     }
 
     /**

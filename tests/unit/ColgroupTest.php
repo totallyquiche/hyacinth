@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Colgroup;
 
 class ColgroupTest extends TestCase
@@ -16,7 +17,7 @@ class ColgroupTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Colgroup::class, new Colgroup);
+        $this->assertInstanceOf(NonVoidElement::class, new Colgroup);
     }
 
     /**

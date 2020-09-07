@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Center;
 
 class CenterTest extends TestCase
@@ -16,7 +17,7 @@ class CenterTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Center::class, new Center);
+        $this->assertInstanceOf(NonVoidElement::class, new Center);
     }
 
     /**

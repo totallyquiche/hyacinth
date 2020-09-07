@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Acronym;
 
 class AcronymTest extends TestCase
@@ -16,7 +17,7 @@ class AcronymTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Acronym::class, new Acronym);
+        $this->assertInstanceOf(NonVoidElement::class, new Acronym);
     }
 
     /**

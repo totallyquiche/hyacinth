@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Noembed;
 
 class NoembedTest extends TestCase
@@ -16,7 +17,7 @@ class NoembedTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Noembed::class, new Noembed);
+        $this->assertInstanceOf(NonVoidElement::class, new Noembed);
     }
 
     /**

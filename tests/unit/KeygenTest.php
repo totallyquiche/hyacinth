@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\VoidElement;
 use Hyacinth\Keygen;
 
 class KeygenTest extends TestCase
@@ -16,7 +17,7 @@ class KeygenTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Keygen::class, new Keygen);
+        $this->assertInstanceOf(VoidElement::class, new Keygen);
     }
 
     /**

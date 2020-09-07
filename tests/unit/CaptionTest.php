@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Caption;
 
 class CaptionTest extends TestCase
@@ -16,7 +17,7 @@ class CaptionTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Caption::class, new Caption);
+        $this->assertInstanceOf(NonVoidElement::class, new Caption);
     }
 
     /**

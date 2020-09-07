@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Optgroup;
 
 class OptgroupTest extends TestCase
@@ -16,7 +17,7 @@ class OptgroupTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Optgroup::class, new Optgroup);
+        $this->assertInstanceOf(NonVoidElement::class, new Optgroup);
     }
 
     /**

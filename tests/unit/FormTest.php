@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Form;
 
 class FormTest extends TestCase
@@ -16,7 +17,7 @@ class FormTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Form::class, new Form);
+        $this->assertInstanceOf(NonVoidElement::class, new Form);
     }
 
     /**

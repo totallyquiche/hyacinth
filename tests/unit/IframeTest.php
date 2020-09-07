@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Iframe;
 
 class IframeTest extends TestCase
@@ -16,7 +17,7 @@ class IframeTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Iframe::class, new Iframe);
+        $this->assertInstanceOf(NonVoidElement::class, new Iframe);
     }
 
     /**

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hyacinty\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Hyacinth\NonVoidElement;
 use Hyacinth\Marquee;
 
 class MarqueeTest extends TestCase
@@ -16,7 +17,7 @@ class MarqueeTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(Marquee::class, new Marquee);
+        $this->assertInstanceOf(NonVoidElement::class, new Marquee);
     }
 
     /**
