@@ -14,13 +14,6 @@ abstract class DomElement
     protected array $attributes = [];
 
     /**
-     * The name of the tag.
-     * 
-     * @var string
-     */
-    protected string $tag_name;
-
-    /**
      * Instantiate the object. Set the type.
      * 
      * @param array
@@ -174,7 +167,7 @@ abstract class DomElement
      */
     public function getOpenTag() : string
     {
-        $open_tag = '<' . $this->tag_name;
+        $open_tag = '<' . $this->getTagName();
 
         foreach ($this->getAttributes() as $attribute_name => $attribute_value) {
             if (is_null($attribute_value)) {
@@ -194,10 +187,7 @@ abstract class DomElement
      * 
      * @return string
      */
-    public function getTagName() : string
-    {
-        return $this->tag_name;
-    }
+    abstract public function getTagName() : string;
 
     /**
      * Return the close tag.

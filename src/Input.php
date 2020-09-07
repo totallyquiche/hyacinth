@@ -6,15 +6,8 @@ namespace Hyacinth;
 
 use Exception;
 
-class Input extends DomElement
+class Input extends SelfClosingElement
 {
-    /**
-     * The tag name of the element.
-     * 
-     * @var string
-     */
-    protected string $tag_name = 'input';
-
     /**
      * Sets the initial attributes. Sets the type to "text" if one was not specified.
      * 
@@ -32,12 +25,12 @@ class Input extends DomElement
     }
 
     /**
-     * Sets the close tag.
+     * Return the name of the element.
      * 
-     * @return string
+     * @var string
      */
-    public function getCloseTag() : string
+    public function getTagName() : string
     {
-        return '';
+        return 'input';
     }
 }

@@ -22,7 +22,10 @@ class DomElementTest extends TestCase
              * 
              * @var string
              */
-            protected string $tag_name = 'fake';
+            public function getTagName() : string
+            {
+                return 'fake';
+            }
 
              /**
               * Return a string representation of the object.
