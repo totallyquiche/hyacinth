@@ -6,7 +6,7 @@ namespace Hyacinth;
 
 use Hyacinth\DomElement;
 
-class Textarea extends DomElement
+class Textarea extends StandardElement
 {
     /**
      * Return the name of the element.
@@ -16,5 +16,15 @@ class Textarea extends DomElement
     public function getTagName() : string
     {
         return 'textarea';
+    }
+
+    /**
+     * Return the element's content, rendered as a string.
+     * 
+     * @return string
+     */
+    public function getRenderedContent() : string
+    {
+        return htmlentities(parent::getRenderedContent());
     }
 }

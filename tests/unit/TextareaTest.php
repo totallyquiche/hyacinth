@@ -21,12 +21,30 @@ class TextareaTest extends TestCase
 
     /**
      * Test that getTagName() returns expected value.
+     * 
+     * @return void
      */
     public function testGetTagName() : void
     {
         $this->assertEquals(
             'textarea',
             (new Textarea)->getTagName()
+        );
+    }
+
+    /**
+     * Test that rendered content does not contain HTML.
+     * 
+     * @return void
+     */
+    public function testRenderedContentDoesNotContainHtml() : void
+    {
+        $content = '<div>text</div>';
+
+        $this->assertEquals(
+            htmlentities($content),
+            (new Textarea)->setContent([$content])
+                ->getRenderedContent()
         );
     }
 }
