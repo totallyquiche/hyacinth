@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Hyacinth;
 
-use Hyacinth\DomElement;
-
 class Textarea extends StandardElement
 {
     /**
