@@ -29,7 +29,36 @@ class HtmlTest extends TestCase
     {
         $this->assertEquals(
             'html',
-            (new html)->getTagName()
+            (new Html)->getTagName()
+        );
+    }
+
+    /**
+     * Test setLang() sets the "lang" attribute.
+     * 
+     * @return void
+     */
+    public function testSetLang() : void
+    {
+        $lang = 'fr';
+
+        $this->assertEquals(
+            $lang,
+            (new Html)->setLang($lang)
+                ->getAttributeValue('lang')
+        );
+    }
+
+    /**
+     * Test new instance of element has "lang" attribute set to "en" by default.
+     * 
+     * @return void
+     */
+    public function testNewInstanceLangIsEn() : void
+    {
+        $this->assertEquals(
+            'en',
+            (new Html)->getAttributeValue('lang')
         );
     }
 }
