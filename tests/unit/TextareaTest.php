@@ -31,4 +31,20 @@ class TextareaTest extends TestCase
             (new Textarea)->getTagName()
         );
     }
+
+    /**
+     * Test that rendered content does not contain HTML.
+     * 
+     * @return void
+     */
+    public function testRenderedContentDoesNotContainHtml() : void
+    {
+        $content = '<div>text</div>';
+
+        $this->assertEquals(
+            htmlentities($content),
+            (new Textarea)->setContent([$content])
+                ->getRenderedContent()
+        );
+    }
 }

@@ -17,4 +17,14 @@ class Textarea extends StandardElement
     {
         return 'textarea';
     }
+
+    /**
+     * Return the element's content, rendered as a string.
+     * 
+     * @return string
+     */
+    public function getRenderedContent() : string
+    {
+        return htmlentities(parent::getRenderedContent());
+    }
 }
