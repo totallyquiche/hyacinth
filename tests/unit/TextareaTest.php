@@ -21,6 +21,8 @@ class TextareaTest extends TestCase
 
     /**
      * Test that getTagName() returns expected value.
+     * 
+     * @return void
      */
     public function testGetTagName() : void
     {
