@@ -7,6 +7,8 @@ namespace Hyacinty\Tests\Unit;
 use PHPUnit\Framework\TestCase;
 use Hyacinth\NonVoidElement;
 use Hyacinth\Head;
+use Hyacinth\Title;
+use Hyacinth\Text;
 
 class HeadTest extends TestCase
 {
@@ -17,7 +19,7 @@ class HeadTest extends TestCase
      */
     public function testCanInstantiate() : void
     {
-        $this->assertInstanceOf(NonVoidElement::class, new Head);
+        $this->assertInstanceOf(NonVoidElement::class, new Head([], new Title([], new Text('title'))));
     }
 
     /**
@@ -29,7 +31,23 @@ class HeadTest extends TestCase
     {
         $this->assertEquals(
             'head',
-            (new Head)->getTagName()
+            (new Head([], new Title([], new Text('title'))))->getTagName()
+        );
+    }
+
+
+    /**
+     * Test a new instance has a title in its content array.
+     * 
+     * @return void
+     */
+    public function testTitleInContent() : void
+    {
+        $title = new Title([], new Text('title'));
+
+        $this->assertEquals(
+            [$title],
+            (new Head([], $title))->getContent()
         );
     }
 }
