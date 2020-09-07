@@ -11,14 +11,7 @@ abstract class DomElement
      * 
      * @var array
      */
-    protected $attributes = [];
-
-    /**
-     * The name of the tag.
-     * 
-     * @var string
-     */
-    protected $tag_name;
+    protected array $attributes = [];
 
     /**
      * Instantiate the object. Set the type.
@@ -37,7 +30,9 @@ abstract class DomElement
      * 
      * @return string
      */
-    abstract public function __toString() : string;
+    public function __toString() : string {
+        return $this->getOpenTag() . $this->getCloseTag();
+    }
 
     /**
      * Sets the initial attributes.
@@ -56,9 +51,9 @@ abstract class DomElement
      * 
      * @param array
      * 
-     * @return Input
+     * @return DomElement
      */
-    public function setAttributes(array $attributes) : Input
+    public function setAttributes(array $attributes) : DomElement
     {
         $this->attributes = $attributes;
 
@@ -80,9 +75,9 @@ abstract class DomElement
      * 
      * @param array $attributes
      * 
-     * @return Input
+     * @return DomElement
      */
-    public function addAttributes(array $attributes) : Input
+    public function addAttributes(array $attributes) : DomElement
     {
         foreach ($attributes as $attribute_name => $attribute_value) {
             $this->setAttribute($attribute_name, $attribute_value);
@@ -96,9 +91,9 @@ abstract class DomElement
      * 
      * @param array|null $attributes
      * 
-     * @return Input
+     * @return DomElement
      */
-    public function removeAttributes(array $attributes = null) : Input
+    public function removeAttributes(array $attributes = null) : DomElement
     {
         $attributes_to_remove = $attributes ?: $this->getAttributes();
         
@@ -115,9 +110,9 @@ abstract class DomElement
      * @param string      $attribute_name
      * @param string|null $attribute_value
      * 
-     * @return Input
+     * @return DomElement
      */
-    public function setAttribute(string $attribute_name, string $attribute_value = null) : Input
+    public function setAttribute(string $attribute_name, string $attribute_value = null) : DomElement
     {
         $this->attributes[$attribute_name] = $attribute_value;
 
@@ -141,9 +136,9 @@ abstract class DomElement
      * 
      * @param string $attribute_name
      * 
-     * @return Input
+     * @return DomElement
      */
-    public function removeAttribute(string $attribute_name) : Input
+    public function removeAttribute(string $attribute_name) : DomElement
     {
         unset($this->attributes[$attribute_name]);
 
@@ -172,7 +167,7 @@ abstract class DomElement
      */
     public function getOpenTag() : string
     {
-        $open_tag = '<' . $this->tag_name;
+        $open_tag = '<' . $this->getTagName();
 
         foreach ($this->getAttributes() as $attribute_name => $attribute_value) {
             if (is_null($attribute_value)) {
@@ -192,8 +187,15 @@ abstract class DomElement
      * 
      * @return string
      */
-    public function getTagName() : string
+    abstract public function getTagName() : string;
+
+    /**
+     * Return the close tag.
+     * 
+     * @return string
+     */
+    public function getCloseTag() : string
     {
-        return $this->tag_name;
+        return '</' . $this->getTagName() . '>';
     }
 }
