@@ -37,7 +37,9 @@ abstract class DomElement
      * 
      * @return string
      */
-    abstract public function __toString() : string;
+    public function __toString() : string {
+        return $this->getOpenTag() . $this->getCloseTag();
+    }
 
     /**
      * Sets the initial attributes.
@@ -195,5 +197,15 @@ abstract class DomElement
     public function getTagName() : string
     {
         return $this->tag_name;
+    }
+
+    /**
+     * Return the close tag.
+     * 
+     * @return string
+     */
+    public function getCloseTag() : string
+    {
+        return '</' . $this->getTagName() . '>';
     }
 }

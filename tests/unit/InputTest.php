@@ -20,21 +20,6 @@ class InputTest extends TestCase
     }
 
     /**
-     * Test that an Input cast to a string is only its open tag.
-     * 
-     * @return void
-     */
-    public function testNewInstanceCastToStringIsOnlyOpenTag() : void
-    {
-        $input = new Input;
-
-        $this->assertEquals(
-            $input->getOpenTag(),
-            (string) $input
-        );
-    }
-
-    /**
      * Test that a new Input has a type of "text" by default.
      * 
      * @return void
@@ -44,19 +29,6 @@ class InputTest extends TestCase
         $this->assertEquals(
             'text',
             (new Input)->getAttributeValue('type')
-        );
-    }
-
-    /**
-     * Test getTagName() returns "input".
-     * 
-     * @return void
-     */
-    public function testGetTagName() : void
-    {
-        $this->assertEquals(
-            'input',
-            (new Input)->getTagName()
         );
     }
 }

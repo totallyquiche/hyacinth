@@ -584,4 +584,19 @@ class DomElementTest extends TestCase
                 ->getAttributes()
         );
     }
+
+    /**
+     * Test that the closing tag is in the format </tag_name>.
+     * 
+     * @return void
+     */
+    public function testCloseTagFormat() : void
+    {
+        $fake = $this->getFake();
+
+        $this->assertEquals(
+            '</' . $fake->getTagName() . '>',
+            $fake->getCloseTag()
+        );
+    }
 }

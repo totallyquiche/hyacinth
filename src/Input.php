@@ -32,12 +32,12 @@ class Input extends DomElement
     }
 
     /**
-     * Returns the string representation of the element.
+     * Sets the close tag.
      * 
      * @return string
      */
-    public function __toString() : string
+    public function getCloseTag() : string
     {
-        return $this->getOpenTag();
+        return '';
     }
 }
