@@ -2,6 +2,12 @@
 
 Hyacinth makes it easy to create HTML with PHP using object-oriented programming.
 
+**By the way, don't use this!**
+
+I created Hyacinth for fun. There are a lot of these types of projects floating around, but writing HTML with PHP is _messy_ and tightly couples the frontend and backend. If this library seems appealing, you may need to reconsider your app's architecture.
+
+Instead, consider using a template system to handle your HTML.
+
 ## Simple Example
 
 ```php
