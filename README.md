@@ -28,7 +28,7 @@ $list = (new Hyacinth\Elements\Ul)->addContentArray([
 
 echo $list;
 
-// <ul><li id="first-list-item"></li><li id="second-list-item"></li><li id="third-list-item"></li></ul>
+// <ul><li id="first-list-item">First</li><li id="second-list-item">Second</li><li id="third-list-item">Third</li></ul>
 
 echo $list->getContent()[0]->getAttributeValue('id');
 
